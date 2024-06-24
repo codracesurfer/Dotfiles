@@ -51,25 +51,23 @@ dotfiles commit -m 'Add .bash_aliases'
 Now with the use of a `bare` repository, there is no `.git` directory in your `$HOME` directory; so it does not introduce any surprises while working with `git`.
 
 
-# Dependencies
-### .tmux.conf plugins install
-
-##### tmux-yank
+# Configurations
+### `.tmux.conf` installs
 ```
 mkdir -p ~/.tmux/yank 
 git clone https://github.com/tmux-plugins/tmux-yank ~/.tmux/yank
 ```
 
 
-### .zshrc installs
+### Dependencies
 ```
 sudo apt install xclip tmux vim zsh
 ```
 
-### zsh plugins
+### `zsh` plugins
 ```
 mkdir ~/.zsh
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 ```
 
