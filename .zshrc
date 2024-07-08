@@ -264,6 +264,7 @@ alias vol3='docker run -v $(pwd):/ctf -it vol3'
 alias vol2='docker run -v $(pwd):/ctf -it vol2'
 alias pwndocker='docker run --cap-add=ALL --security-opt seccomp=unconfined -v $(pwd):/ctf -it pwndocker'
 alias kalidocker='docker run --cap-add=ALL -v $(pwd):/ctf -it kalidocker'
+alias ..="cd .."
 
 ################### PATH ###################
 export PATH="/home/$USER/.local/bin:$PATH"
