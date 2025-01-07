@@ -52,7 +52,7 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker copybuffer zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git docker copybuffer zsh-syntax-highlighting zsh-autosuggestions)
 
 # Declare the variable
 typeset -A ZSH_HIGHLIGHT_STYLES
@@ -146,14 +146,18 @@ alias vol2='docker run -v $(pwd):/ctf -it vol2'
 alias bat="batcat"
 alias sage="docker run -it sagemath/sagemath"
 alias pwninit='mkdir GDB_LOG;pwninit --template-path /home/kali/.config/pwntemplate/template.py'
-alias ida="/mnt/c/Users/Mathias/Documents/Software/IDAPro8.3/ida64.exe -A"
+alias ida="/mnt/c/Program\ Files/IDA\ Freeware\ 8.4/ida64.exe"
+alias explorer="/mnt/c/Windows/explorer.exe"
 
 ################### PATH ###################
-export PATH="/home/$USER/.local/bin:$PATH"
-export PATH="/home/$USER/.cargo/bin:$PATH"
+# /home/kali/.cargo/bin:/home/kali/.local/bin:/home/kali/.cargo/bin:/home/kali/.local/bin:/home/kali/.cargo/bin:/home/kali/.local/bin:/home/kali/.cargo/bin:/home/kali/.local/bin:/home/kali/.cargo/bin:/home/kali/.local/bin:/home/kali/.cargo/bin:/home/kali/.local/bin:/home/kali/.cargo/bin:/home/kali/.local/bin:/home/kali/.cargo/bin:/home/kali/.local/bin:/home/kali/.cargo/bin:/home/kali/.local/bin:/home/kali/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/010 Editor:/mnt/c/Program Files (x86)/Bulk Extractor 1.5.0/python:/mnt/c/Program Files (x86)/Bulk Extractor 1.5.0/32-bit:/mnt/c/Program Files (x86)/Bulk Extractor 1.5.0/64-bit:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/ProgramData/chocolatey/lib/winlibs/tools/mingw64/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Program Files/BinDiff/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/Mathias/AppData/Local/Programs/Python/Python311/Scripts/:/mnt/c/Users/Mathias/AppData/Local/Programs/Python/Python311/:/mnt/c/Users/Mathias/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/Mathias/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/Mathias/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Mathias/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files (x86)/Nmap:/mnt/c/Users/Mathias/AppData/Local/Programs/oh-my-posh/bin:/mnt/c/Users/Mathias/AppData/Local/bin/NASM:/mnt/c/Users/Mathias/Documents/Software/IDAPro8.3:/mnt/c/Users/Mathias/Documents/SysinternalsSuite:/mnt/c/Users/Mathias/Documents/Software/binutils-2.28-1-mingw32-bin/bin:/mnt/c/Users/Mathias/Documents/Software/binutils-2.28-1-mingw32-bin/mingw32/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Users/Mathias/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/Mathias/Documents/Software/x96dbg/release:/mnt/c/Users/Mathias/Documents/Software/Get-ZimmermanTools/tools/net6:/mnt/c/Users/Mathias/Documents/Software/Get-ZimmermanTools/tools/net6/MFTExplorer:/mnt/c/Users/Mathias/Documents/Software/Get-ZimmermanTools/tools/net6/RegistryExplorer:/mnt/c/Users/Mathias/Documents/Software/Get-ZimmermanTools/tools/net6/TimelineExplorer:/mnt/c/Users/Mathias/Documents/Software/Get-ZimmermanTools/tools/net6/ShellbagsExplorer:/mnt/c/Users/Mathias/AppData/Local/Android/Sdk/platform-tools/:/mnt/c/Users/Mathias/Documents/Software/SysinternalsSuite:/mnt/c/Users/Mathias/Documents/Software/MemProcFS:/mnt/c/Users/Mathias/.dotnet/tools:/home/kali/.dotnet/tools:/home/kali/.local/bin
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib"
+export PATH="$PATH:/home/$USER/.local/bin"
+export PATH="$PATH:/home/$USER/.cargo/bin"
+export PATH="$PATH:/home/$USER/.dotnet/tools"
+export PATH="$PATH:/mnt/c/Program Files/Docker/Docker/resources/bin"
+export PATH="$PATH:/mnt/c/Users/Mathias/AppData/Local/Programs/Microsoft VS Code/bin"
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Created by `pipx` on 2024-09-09 08:51:38
-export PATH="$PATH:/home/kali/.local/bin"
